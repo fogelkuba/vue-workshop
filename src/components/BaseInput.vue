@@ -1,6 +1,6 @@
 <template>
-  <label>
-    {{label}}
+  <label class="input">
+    <span class="input-label">{{label}}</span>
     <input type="text"
            :value="value"
            :placeholder="placeholder"
@@ -42,5 +42,15 @@
   };
 </script>
 
-<style>
+<style lang="scss">
+  .input {
+    margin: 0 10px;
+    
+    &-label {
+      display: block;
+      text-align: left;
+      font-size: .8rem;
+      line-height: .9rem;
+    }
+  }
 </style>
