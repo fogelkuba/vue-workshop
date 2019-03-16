@@ -7,7 +7,9 @@
       <router-link to="/settings">Settings</router-link>
       <button @click="toggleAuth">Toggle Admin</button>
     </div>
-    <router-view />
+    <div class="container">
+      <router-view />
+    </div>
   </div>
 </template>
 

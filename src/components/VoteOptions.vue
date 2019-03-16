@@ -7,9 +7,12 @@
     <ul>
       <slot>
         <slot v-for="(option) in voteOptions"
-              name="item">
-          <li>
-            <BaseButton>
+              name="item"
+              :optionItem="option"
+        >
+          <li :key="option.id"
+              class="option">
+            <BaseButton :style="{color: option.color, borderColor: option.color}">
               {{option.label}}
               {{option.color}}
             </BaseButton>
@@ -25,6 +28,7 @@
 
   export default {
     name: "VoteOptions",
+    components: {BaseButton},
     data: () => {
       return {
         voteOptions: [
@@ -47,6 +51,17 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .option {
+    margin: 10px;
+    color: white;
+    padding: 20px;
+  }
 </style>
