@@ -22,9 +22,6 @@ export default {
 
 <style lang="scss" scoped>
   .button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding: 10px 15px;
     border-radius: 3px;
   }
