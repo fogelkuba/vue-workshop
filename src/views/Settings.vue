@@ -11,6 +11,7 @@ export default {
     if (auth) {
       next();
     } else {
+      alert(`Access to ${to.path} is restricted.`);
       next({
         path: from.path
       });

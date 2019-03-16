@@ -1,13 +1,28 @@
 <template>
   <div class="home">
     <h1>Home</h1>
+    <BaseButton :loading="isLoading">First Button</BaseButton>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+  import BaseButton from '@/components/BaseButton.vue';
+  import BaseInput from '@/components/BaseInput.vue';
+  
+  
 export default {
   name: "Home",
-  components: {}
+  data: () => {
+    return {
+      isLoading: false
+    }
+  },
+  components: {
+    BaseButton,
+    BaseInput
+  },
+  mounted() {
+    console.log(this.$listeners);
+  }
 };
 </script>

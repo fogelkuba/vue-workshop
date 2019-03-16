@@ -12,19 +12,19 @@
 </template>
 
 <script>
-  export default {
-    methods: {
-      toggleAuth() {
-        const auth = localStorage.getItem('isAdmin') === 'true';
-        
-        if (auth) {
-          localStorage.setItem('isAdmin', 'false');
-        } else {
-          localStorage.setItem('isAdmin', 'true');
-        }
+export default {
+  methods: {
+    toggleAuth() {
+      const auth = localStorage.getItem("isAdmin") === "true";
+
+      if (auth) {
+        localStorage.setItem("isAdmin", "false");
+      } else {
+        localStorage.setItem("isAdmin", "true");
       }
     }
   }
+};
 </script>
 
 <style lang="scss">
