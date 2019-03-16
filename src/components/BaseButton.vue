@@ -1,8 +1,8 @@
 <template>
-  <button class="button" :class="{'disabled': loading}">
+  <button class="button" :class="{ disabled: loading }">
     <slot></slot>
     <span v-if="loading" class="loading">
-      <img src="@/assets/refresh.png" alt="Loading" class="loading-icon">
+      <img src="@/assets/refresh.png" alt="Loading" class="loading-icon" />
     </span>
   </button>
 </template>
@@ -15,34 +15,34 @@ export default {
       type: Boolean,
       required: false,
       default: false
-}
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-  .button {
-    padding: 10px 15px;
-    border-radius: 3px;
+.button {
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.loading {
+  margin-left: 0.5rem;
+  &-icon {
+    max-height: 15px;
+    animation: loader 1s infinite;
+
+    @keyframes loader {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
   }
-  .disabled {
-    opacity: .5;
-    pointer-events: none;
-  }
-  .loading {
-    margin-left: .5rem;
-    &-icon {
-        max-height: 15px;
-        animation: loader 1s infinite;
-      
-      @keyframes loader {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(359deg);
-        }
-        }
-     }
-  }
+}
 </style>
