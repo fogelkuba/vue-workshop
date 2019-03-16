@@ -1,13 +1,11 @@
 <template>
-    <h1>Score</h1>
+  <h1>Score</h1>
 </template>
 
 <script>
-    export default {
-        name: "Score"
-    }
+export default {
+  name: "Score"
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
