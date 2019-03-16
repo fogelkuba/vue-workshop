@@ -15,21 +15,20 @@
   import BaseButton from '@/components/BaseButton.vue';
   import BaseInput from '@/components/BaseInput.vue';
   
-  
-export default {
-  name: "Home",
-  data: () => {
-    return {
-      inputValue: 'test',
-      isLoading: false
+  export default {
+    name: "Home",
+    data: () => {
+      return {
+        inputValue: 'test',
+        isLoading: false
+      }
+    },
+    components: {
+      BaseButton,
+      BaseInput
+    },
+    mounted() {
+      console.log(this.$listeners);
     }
-  },
-  components: {
-    BaseButton,
-    BaseInput
-  },
-  mounted() {
-    console.log(this.$listeners);
-  }
-};
+  };
 </script>
