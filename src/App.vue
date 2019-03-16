@@ -15,6 +15,9 @@
 
 <script>
 export default {
+  created() {
+    this.$store.dispatch('user/init');
+  },
   methods: {
     toggleAuth() {
       const auth = localStorage.getItem("isAdmin") === "true";
